@@ -15,8 +15,8 @@ function Timer() {
 
 
     return (
-    <div className="text-center rounded-xl p-4 w-fit mx-auto bg-blue-50 mb-2">
-        <h1 className="text-xl mb-2">Tiempo restante para acabar el dia ⌚</h1>
+    <div className="text-center rounded-xl p-4 w-fit aspect-square bg-orange-100 mb-2 content-center">
+        <h1 className="text-xl mb-2">Tiempo restante ⌚</h1>
         <div className="flex gap-4 items-center justify-center">
         <p className="text-4xl font-semibold">{timeLeft.hours}<span className="text-2xl">h</span> </p>
         <p className="text-4xl font-semibold">{timeLeft.minutes}<span className="text-2xl">m</span> </p>

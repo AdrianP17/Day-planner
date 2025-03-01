@@ -16,17 +16,19 @@ function TaskItem({ task, onCheck, variant } : Props) {
           checked={task.isChecked}
           onChange={() => onCheck(task.id)}
         />
-        <p className={variant === 'completed' ? 'line-through' : ''}>
+        <p className={variant === 'completed' ? 'line-through' : 'text-nowrap'}>
           {task.title}
         </p>
         <div className={`px-3 text-sm py-1 flex gap-2 items-center rounded-full ${
-          variant === 'completed' ? 'bg-green-50' : 'bg-slate-50'
+          variant === 'completed' ? 'bg-slate-50 text-gray-400' : 'bg-[#9AD09B] text-white'
         }`}>
           <Clock size={12} />
-          {task.hours > 0 ? (
-            <p className="text-slate-400">{task.hours}h {task.minutes}m</p>
+          {task.hours > 0 && task.minutes > 0 ? (
+            <p className="">{task.hours}h {task.minutes}m</p>
+          ) : task.hours > 0 ? (
+            <p className="">{task.hours}h</p>
           ) : (
-            <p className="text-slate-400">{task.minutes}m</p>
+            <p className="">{task.minutes}m</p>
           )}
         </div>
         <button className="absolute cursor-pointer right-0 top-[3px] p-1 opacity-0 group-hover:opacity-100 transition rounded-full text-slate-400 hover:text-slate-600"

@@ -11,8 +11,8 @@ type Props = {
 function TaskList({ title, tasks, onCheck, variant }: Props) {
   return (
     <ul>
-      <p className="text-lg font-semibold mb-1">{title}</p>
-      <div className="bg-gray-50 p-4 rounded-xl">
+      <p className="text-lg mb-2">{title} ({tasks.length})</p>
+      <div className="bg-white p-4 rounded-xl">
         {tasks.map(task => (
           <TaskItem key={task.id} task={task} onCheck={onCheck} variant={variant} />
         ))}

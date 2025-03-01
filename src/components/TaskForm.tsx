@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { taskSchema } from '../schemas/schemas';
 import { useChecklistStore } from '../store/store';
-import { Clock } from 'lucide-react';
+import { Clock, Plus } from 'lucide-react';
 import { z } from 'zod';
 
 type TaskFormData = z.infer<typeof taskSchema>;
@@ -36,11 +36,12 @@ const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-4 rounded-lg shadow-md space-y-4 h-fit">
-      <h2 className="text-lg font-semibold">Agregar Tarea</h2>
+    <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-4 rounded-lg space-y-4 h-fit">
+      <h2 className="text-lg">Agregar tarea para hoy</h2>
       
       {/* Campo de título */}
       <div>
+      <label className="block text-sm font-medium mb-1">Título</label>
         <input
           {...register('title')}
           placeholder="Nombre de la tarea"
@@ -54,7 +55,7 @@ const TaskForm = () => {
         <div className="flex-1">
           <label className="block text-sm font-medium mb-1">Horas</label>
           <div className="flex items-center gap-2 border p-2 rounded">
-            <Clock size={16} />
+            <Clock color='#9AD09B' size={16} />
             <input
               type="number"
               {...register('hours')}
@@ -68,7 +69,7 @@ const TaskForm = () => {
         <div className="flex-1">
           <label className="block text-sm font-medium mb-1">Minutos</label>
           <div className="flex items-center gap-2 border p-2 rounded">
-            <Clock size={16} />
+            <Clock color='#9AD09B' size={16} />
             <input
               type="number"
               {...register('minutes')}
@@ -82,9 +83,10 @@ const TaskForm = () => {
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+        className="w-full cursor-pointer flex items-center gap-2 justify-center font-medium opacity-100 bg-[#9AD09B] text-black px-4 py-2 rounded transition"
       >
-        Agregar Tarea
+        <Plus size={20} />
+       <p>Agregar Tarea</p>
       </button>
     </form>
   );

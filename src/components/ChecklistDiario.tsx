@@ -34,17 +34,14 @@ function ChecklistDiario() {
 
   return (
     <div className="p-4 w-full">
-      <div className="flex gap-2 items-center mb-4">
-        <div className="p-3 grid content-center bg-blue-500/50 text-white rounded-full">
-          <NotebookPen size={20} strokeWidth={1.7} />
-        </div>
-        <h1 className="text-xl">Agrega actividades que quieras realizar</h1>
-      </div>
       <div>
         {/* Actividades del dia */}
-        <h2 className="text-lg font-semibold mb-2">Actividades del día {format(date, 'dd/MM/yyyy')}</h2>
-        <button onClick={getPrevDate}><ChevronLeft /></button>
-        <button onClick={getNextDate}><ChevronRight /></button>
+        <p className="text-sm">Actividades del día</p>
+        <div className="flex space-x-2">
+        <button className="cursor-pointer text-[#9AD09B] opacity-60 hover:opacity-100" onClick={getPrevDate}><ChevronLeft /></button>
+        <p className="font-semibold text-lg">{format(date, 'dd/MM/yyyy')}</p>
+        <button className="cursor-pointer text-[#9AD09B] opacity-60 hover:opacity-100" onClick={getNextDate}><ChevronRight /></button>
+        </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
         <TaskList

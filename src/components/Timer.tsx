@@ -15,9 +15,13 @@ function Timer() {
 
 
     return (
-    <div>
-        <h1>Tiempo restante para acabar el dia</h1>
-        <p>{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds < 10 ? '0' + timeLeft.seconds : timeLeft.seconds }</p>
+    <div className="text-center rounded-xl p-4 w-fit mx-auto bg-blue-50 mb-2">
+        <h1 className="text-xl mb-2">Tiempo restante para acabar el dia ⌚</h1>
+        <div className="flex gap-4 items-center justify-center">
+        <p className="text-4xl font-semibold">{timeLeft.hours}<span className="text-2xl">h</span> </p>
+        <p className="text-4xl font-semibold">{timeLeft.minutes}<span className="text-2xl">m</span> </p>
+        <p className="text-4xl font-semibold">{timeLeft.seconds}<span className="text-2xl">s</span> </p>
+        </div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, NotebookPen } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { format } from 'date-fns'
 import { useEffect, useState } from "react";
 import { useChecklistStore } from "@/store/store";
@@ -9,7 +9,6 @@ function ChecklistDiario() {
   const [todayTasks, setTodayTasks] = useState<ChecklistItem[]>([]);
   const { checklist, toggleTask } = useChecklistStore();
   const [date, setDate] = useState(new Date());
-  const getTodayDate = () => format(new Date(), 'dd/MM/yyyy');
 
   useEffect(() => {
 

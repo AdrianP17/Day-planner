@@ -1,4 +1,3 @@
-import { TrendingUp } from "lucide-react"
 import { Pie, PieChart } from "recharts"
 
 import {
@@ -15,7 +14,6 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "../components/ui/chart"
-import { activities } from "@/pages/HomePage"
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
   { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
@@ -68,7 +66,7 @@ export function CustomChart() {
               content={<ChartTooltipContent hideLabel />}
             />
             <Pie
-              data={activities}
+              data={[]}
               dataKey="hours"
               nameKey="title"
               innerRadius={60}

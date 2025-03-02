@@ -1,7 +1,7 @@
 
 import Timer from "../components/Timer"
 import ChecklistDiario from "@/components/ChecklistDiario"
-import TaskForm from "@/components/TaskForm"
+import TaskForm from "@/components/tasks/TaskForm"
 
 
 function HomePage() {

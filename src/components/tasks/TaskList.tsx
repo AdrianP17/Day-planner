@@ -1,5 +1,5 @@
 import { ChecklistItem } from "@/entitites/ChecklistItem"
-import { Archive, Clock } from "lucide-react"
+import { Archive } from "lucide-react"
 import TaskItem from "./TaskItem"
 
 type Props = {

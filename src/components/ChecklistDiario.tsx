@@ -3,7 +3,7 @@ import { format } from 'date-fns'
 import { useEffect, useState } from "react";
 import { useChecklistStore } from "@/store/store";
 import { ChecklistItem } from "@/entitites/ChecklistItem";
-import TaskList from "./TaskList";
+import TaskList from "./tasks/TaskList";
 
 function ChecklistDiario() {
   const [todayTasks, setTodayTasks] = useState<ChecklistItem[]>([]);

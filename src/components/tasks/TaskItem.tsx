@@ -31,7 +31,7 @@ function TaskItem({ task, onCheck, variant } : Props) {
             <p className="">{task.minutes}m</p>
           )}
         </div>
-        <button className="absolute cursor-pointer right-0 top-[3px] p-1 opacity-0 group-hover:opacity-100 transition rounded-full text-slate-400 hover:text-slate-600"
+        <button className="absolute cursor-pointer right-0 top-[3px] p-1 opacity-0 group-hover:opacity-100 transition rounded-full text-stone-400 hover:text-stone-600"
         onClick={() => removeTask(task.id)}>
             <X size={16} />
         </button>

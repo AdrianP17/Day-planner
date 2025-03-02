@@ -1,8 +1,8 @@
 // TaskForm.tsx
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { taskSchema } from '../schemas/schemas';
-import { useChecklistStore } from '../store/store';
+import { taskSchema } from '../../schemas/schemas';
+import { useChecklistStore } from '../../store/store';
 import { Clock, Plus } from 'lucide-react';
 import { z } from 'zod';
 
@@ -46,7 +46,7 @@ const TaskForm = () => {
         <input
           {...register('title')}
           placeholder="Nombre de la tarea"
-          className=" p-2 rounded w-full outline-none border-b border-[#9AD09B] text-white"
+          className=" p-2 w-full outline-none border-b border-[#9AD09B] text-white"
         />
         {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title.message}</p>}
       </div>

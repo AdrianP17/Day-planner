@@ -37,7 +37,7 @@ const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="bg-[#333131] p-4 rounded-lg space-y-4 h-fit">
+    <form onSubmit={handleSubmit(onSubmit)} className="bg-[#333131] p-4 rounded-lg space-y-4 h-fit w-fit">
       <h2 className="text-lg">Agregar tarea para hoy</h2>
       
       {/* Campo de título */}

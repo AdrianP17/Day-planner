@@ -12,8 +12,8 @@ function HomePage() {
       <div className="flex flex-col md:flex-row gap-4 mb-4 w-full justify-between">
         <Timer />
         <ChecklistDiario />
-        <TaskForm />
       </div>
+        <TaskForm />
     </div>
   )
 }

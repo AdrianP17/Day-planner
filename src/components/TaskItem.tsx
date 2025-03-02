@@ -20,7 +20,7 @@ function TaskItem({ task, onCheck, variant } : Props) {
           {task.title}
         </p>
         <div className={`px-3 text-sm py-1 flex gap-2 items-center rounded-full ${
-          variant === 'completed' ? 'bg-slate-50 text-gray-400' : 'bg-[#9AD09B] text-white'
+          variant === 'completed' ? 'bg-stone-300 text-black' : 'bg-[#9AD09B] text-[#171717]'
         }`}>
           <Clock size={12} />
           {task.hours > 0 && task.minutes > 0 ? (

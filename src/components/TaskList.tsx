@@ -12,12 +12,12 @@ function TaskList({ title, tasks, onCheck, variant }: Props) {
   return (
     <ul>
       <p className="text-lg mb-2">{title} ({tasks.length})</p>
-      <div className="bg-white p-4 rounded-xl">
+      <div className="bg-[#333131] p-4 rounded-xl">
         {tasks.map(task => (
           <TaskItem key={task.id} task={task} onCheck={onCheck} variant={variant} />
         ))}
         {tasks.length === 0 && (
-          <div className="flex flex-col items-center gap-2 text-gray-500">
+          <div className="flex flex-col items-center gap-2 text-stone-500">
             <Archive />
             <p>No hay tareas</p>
           </div>

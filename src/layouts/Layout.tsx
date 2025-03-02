@@ -1,14 +1,13 @@
-import { PropsWithChildren } from "react"
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router"
 
 
 
-function Layout({ children }: PropsWithChildren) {
+function Layout() {
   return (
-    <div className="border-2 border-gray-900 p-4">
-        <p>1</p>
-        <Outlet />
-        {children}
+    <div className="min-h-screen bg-[#171717] text-white">
+        <main>
+          <Outlet />
+        </main>
     </div>
   )
 }

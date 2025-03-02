@@ -33,13 +33,13 @@ function ChecklistDiario() {
   }
 
   return (
-    <div className="p-4 w-full">
+    <div className="w-full">
       <div>
         {/* Actividades del dia */}
         <p className="text-sm">Actividades del día</p>
         <div className="flex space-x-2">
         <button className="cursor-pointer text-[#9AD09B] opacity-60 hover:opacity-100" onClick={getPrevDate}><ChevronLeft /></button>
-        <p className="font-semibold text-lg">{format(date, 'dd/MM/yyyy')}</p>
+        <p onClick={() => setDate(new Date())} className="cursor-pointer font-semibold text-lg">{format(date, 'PP')}</p>
         <button className="cursor-pointer text-[#9AD09B] opacity-60 hover:opacity-100" onClick={getNextDate}><ChevronRight /></button>
         </div>
       </div>

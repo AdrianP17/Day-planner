@@ -20,7 +20,8 @@ const TaskForm = () => {
       title: '',
       hours: '',
       minutes: ''
-    }
+    },
+    mode: 'onSubmit'
   });
 
   const { addTask } = useChecklistStore();
@@ -36,7 +37,7 @@ const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-4 rounded-lg space-y-4 h-fit">
+    <form onSubmit={handleSubmit(onSubmit)} className="bg-[#333131] p-4 rounded-lg space-y-4 h-fit">
       <h2 className="text-lg">Agregar tarea para hoy</h2>
       
       {/* Campo de título */}
@@ -45,7 +46,7 @@ const TaskForm = () => {
         <input
           {...register('title')}
           placeholder="Nombre de la tarea"
-          className="border p-2 rounded w-full"
+          className=" p-2 rounded w-full outline-none border-b border-[#9AD09B] text-white"
         />
         {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title.message}</p>}
       </div>
@@ -54,7 +55,7 @@ const TaskForm = () => {
       <div className="flex gap-4">
         <div className="flex-1">
           <label className="block text-sm font-medium mb-1">Horas</label>
-          <div className="flex items-center gap-2 border p-2 rounded">
+          <div className="flex items-center gap-2  p-2 rounded">
             <Clock color='#9AD09B' size={16} />
             <input
               type="number"
@@ -68,7 +69,7 @@ const TaskForm = () => {
 
         <div className="flex-1">
           <label className="block text-sm font-medium mb-1">Minutos</label>
-          <div className="flex items-center gap-2 border p-2 rounded">
+          <div className="flex items-center gap-2 p-2 rounded">
             <Clock color='#9AD09B' size={16} />
             <input
               type="number"
@@ -86,7 +87,7 @@ const TaskForm = () => {
         className="w-full cursor-pointer flex items-center gap-2 justify-center font-medium opacity-100 bg-[#9AD09B] text-black px-4 py-2 rounded transition"
       >
         <Plus size={20} />
-       <p>Agregar Tarea</p>
+       <p className=''>Agregar Tarea</p>
       </button>
     </form>
   );
